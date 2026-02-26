@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: #000;
+    color: #0ff;
+    overflow: hidden;
+    user-select: none;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, #001122 0%, #000 100%);
+    cursor: none;
+}
+
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+#score, #worldName {
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    text-shadow: 0 0 10px #0ff;
+    font-weight: bold;
+}
+
+#score { left: 20px; }
+#worldName { right: 20px; }
+
+#gameOver, #menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 40px;
+    border: 2px solid #0ff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 50px #0ff;
+    pointer-events: all;
+}
+
+#gameOver h2, #menu h1 {
+    color: #f0f;
+    text-shadow: 0 0 20px #f0f;
+    margin-bottom: 20px;
+}
+
+button {
+    background: linear-gradient(45deg, #0ff, #00f);
+    border: none;
+    color: #000;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px #0ff;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #0ff;
+    background: linear-gradient(45deg, #f0f, #f0f);
+}
+
+.neon-glow {
+    box-shadow: 
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff,
+        inset 0 0 10px rgba(0,255,255,0.3);
+}
